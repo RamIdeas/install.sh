@@ -11,24 +11,20 @@ CASKS=(
   visual-studio-code
   spotify
   vlc
-  dropbox
+#  dropbox
   google-drive
-  sync
+#  sync
   github
   cyberduck
-  postman
+#  postman
   discord
-  microsoft-teams
-  silicon
-  qflipper
+#  microsoft-teams
+#  silicon
   pieces
   ollama
   devtoys
   the-unarchiver
-  cheatsheet
-  zenmap
-  tiled
-  arduino-ide
+# arduino-ide
   transmission
 )
 
@@ -39,14 +35,13 @@ FORMULAE=(
   nmap
   wget
   git
-  pinentry-mac
+# pinentry-mac
   python
-  python-tk
 )
 
 # NPM Packages: Global Node packages to be installed via NPM.
 NPMPACKAGES=(
-  express
+#  express
 )
 
 # VSCode Extensions: Specifies the IDs of Visual Studio Code extensions to install.
@@ -54,10 +49,10 @@ NPMPACKAGES=(
 VSCODE=(
   "esbenp.prettier-vscode"
   "GitHub.copilot"
-  "dsznajder.es7-react-js-snippets"
+#  "dsznajder.es7-react-js-snippets"
   "ritwickdey.liveserver"
-  "github.vscode-pull-request-github"
-  "sourcegraph.cody-ai"
+#  "github.vscode-pull-request-github"
+#  "sourcegraph.cody-ai"
   "eamodio.gitlens"
   "meshintelligenttechnologiesinc.pieces-vscode"
   "foxundermoon.shell-format"
@@ -66,13 +61,21 @@ VSCODE=(
 # App Store Apps: List of App Store app IDs to install via `mas` (Mac App Store CLI).
 # Each number corresponds to an application's ID in the App Store.
 APPSTORE=(
-  409201541  # Pages
-  409203825  # Numbers
-  1278508951 # Trello
+#  409201541  # Pages
+#  409203825  # Numbers
+#  1278508951 # Trello
+310633997 # WhatsApp
 )
 
 # SYSTEM SETTINGS: Commands to configure macOS system preferences and behaviors.
 SETTINGS=(
+  # Disables "natural" scrolling
+  "defaults write -g com.apple.swipescrolldirection -boolean NO"
+  # Hides "recents" section of Dock
+  "defaults write com.apple.dock show-recents -bool false"
+  # Disable period replacement from double-space
+  "defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -int 0"
+
   # Sets the mouse speed to 3
   "defaults write -g com.apple.mouse.scaling 3"
   # Sets the trackpad speed to 3
@@ -115,20 +118,22 @@ DOCK_REPLACE=(
 DOCK_ADD=(
   "/Applications/iTerm.app"
   "/Applications/Visual Studio Code.app"
-  "/Applications/GitHub Desktop.app"
+#  "/Applications/GitHub Desktop.app"
   "/Applications/Spotify.app"
-  "/Applications/Discord.app"
-  "/Applications/Microsoft Teams (work or school).app"
+  "/Applications/Utilities/Activity Monitor.app"
+#  "/Applications/Discord.app"
+#  "/Applications/Microsoft Teams (work or school).app"
 )
 DOCK_REMOVE=(
-  "Meldinger"
-  "Kart"
-  "Bilder"
-  "Påminnelser"
+  "App Store"
+  "Messages"
+  "Maps"
+  "Photos"
+  "Reminders"
   "FaceTime"
-  "Kontakter"
+  "Contacts"
   "TV"
-  "Musikk"
+  "Music"
   "Mail"
 )
 
